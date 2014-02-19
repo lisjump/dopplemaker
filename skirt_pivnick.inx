@@ -1,0 +1,58 @@
+
+<inkscape-extension>
+
+  <_name>Skirt-Pivnick</_name>
+  <id>sewingpatterns.skirt_pivnick.llueninghoener</id>
+
+  <dependency type="executable" location="extensions">skirt_pivnick.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">sewing_patterns.py</dependency>
+  <param name="extra" type="notebook">
+    <page name="extra" _gui-text="Options">
+      <param name="m_unit" type="optiongroup" _gui-text="Select measurement: ">
+            <option value="Inches">Inches</option>
+            <option value="Centimeters">Centimeters</option>
+      </param>
+      <param name="size" type="optiongroup" _gui-text="Select Size: ">
+            <option type="string" value="custom">Custom</option>
+            <option type="string" value="4">4</option>
+            <option type="string" value="6">6</option>
+            <option type="string" value="8">8</option>
+            <option type="string" value="10">10</option>
+            <option type="string" value="12">12</option>
+            <option type="string" value="14">14</option>
+            <option type="string" value="16">16</option>
+            <option type="string" value="katrinleft">katrinleft</option>
+            <option type="string" value="katrinright">katrinright</option>
+            <option type="string" value="lis">lis</option>
+      </param>
+    </page>
+    <page name="extra" _gui-text="Lower Torso">
+      <param name="abdomen_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Abdomen Front">17.75</param>
+      <param name="abdomen_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Abdomen Back">14.75</param>
+      <param name="waist_knee" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Knee">23.75</param>
+      <param name="waist_hip_side" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Hip: Side">8.125</param>
+      <param name="hip_arc_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Hip Arc Back">18</param>
+      <param name="waist_hip_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Hip: Front">8</param>
+      <param name="waist_hip_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Hip: Back">7.875</param>
+      <param name="hip_arc_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Hip Arc Front">18.5</param>
+    </page>
+    <page name="extra" _gui-text="Upper Torso">
+      <param name="waist_arc_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist Arc Back">11.75</param>
+      <param name="waist_arc_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist Arc Front">13.75</param>
+    </page>
+
+  </param>
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Sewing Patterns"/>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command reldir="extensions" interpreter="python">skirt_pivnick.py</command>
+  </script>
+
+</inkscape-extension>

@@ -1,0 +1,10 @@
+waist_arc_front
+waist_arc_back
+abdomen_front
+abdomen_back
+hip_arc_front
+hip_arc_back
+waist_hip_front
+waist_hip_back
+waist_hip_side
+waist_knee
