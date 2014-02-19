@@ -25,3 +25,7 @@ Python Inkscape Extensions do not currently work under OSX Lion. There is an err
 Credits
 ========
 Much of sewing_patterns.py was written by Susan Spencer at taumeta.org. I have just built upon it for my own needs and added my own custom blocks and patterns. She is now collaborating on another great project for standalone open source patternmaking software called [Valentina](https://bitbucket.org/dismine/valentina/overview). Valentina promises to be something really great and won't require programming knowledge.
+
+Wiki
+=========
+Please look at the wiki for pattern and block descriptions, tutorials on writing your own patterns, instructions on creating seam allowances, creating printable patterns, and more.
