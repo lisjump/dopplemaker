@@ -91,15 +91,6 @@ class BodicePivnick(inkex.Effect):
           measurementsxml = xml2obj(measurementsraw)
           measurementsraw.close()
           
-          measurementscustomraw = open('women_measurements_custom.xml', 'r')
-          measurementscustomxml = xml2obj(measurementscustomraw)
-          measurementscustomraw.close()
-          
-        if m_size != "custom":
-          measurementsraw = open('women_measurements.xml', 'r')
-          measurementsxml = xml2obj(measurementsraw)
-          measurementsraw.close()
-          
           try:
             measurementscustomraw = open('women_measurements_custom.xml', 'r')
             measurementscustomxml = xml2obj(measurementscustomraw)
