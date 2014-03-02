@@ -1,0 +1,76 @@
+
+<inkscape-extension>
+
+  <_name>Bodice-Children</_name>
+  <id>sewingpatterns.bodice_children.llueninghoener</id>
+
+  <dependency type="executable" location="extensions">bodice_children.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">sewing_patterns.py</dependency>
+  <param name="extra" type="notebook">
+    <page name="extra" _gui-text="Options">
+      <param name="m_unit" type="optiongroup" _gui-text="Select measurement: ">
+            <option value="Inches">Inches</option>
+            <option value="Centimeters">Centimeters</option>
+      </param>
+      <param name="sleeves" type="optiongroup" _gui-text="Sleeves: ">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+      </param>
+      <param name="size" type="optiongroup" _gui-text="Select Size: ">
+            <option type="string" value="custom">Custom</option>
+            <option type="string" value="4">4</option>
+            <option type="string" value="6">6</option>
+            <option type="string" value="8">8</option>
+            <option type="string" value="10">10</option>
+            <option type="string" value="12">12</option>
+            <option type="string" value="14">14</option>
+            <option type="string" value="16">16</option>
+      </param>
+    </page>
+    <page name="extra" _gui-text="Arm">
+      <param name="shoulder_elbow" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Shoulder to Elbow">13.375</param>
+      <param name="underarm" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Underarm Length">18</param>
+      <param name="wrist" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Wrist Circumference">6.375</param>
+      <param name="upperarm_width" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Upperarm Width">11.125</param>
+      <param name="elbow" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Elbow Circumference">11.5</param>
+      <param name="shoulder_wrist" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Shoulder to Wrist">23.875</param>
+    </page>
+    <page name="extra" _gui-text="Upper Torso">
+      <param name="neck_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Neck Base Front">8.75</param>
+      <param name="shoulder_slope_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Shoulder Slope: Front">17.625</param>
+      <param name="shoulder_length" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Shoulder Length">5.375</param>
+      <param name="across_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Across Back">15.375</param>
+      <param name="side_length" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Side Length">7.875</param>
+      <param name="torso_full_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Torso: Full Front Length">17.125</param>
+    </page>
+<page name="extra" _gui-text="Upper Torso2">
+      <param name="waist_arc_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist Arc Back">11.75</param>
+      <param name="shoulder_slope_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Shoulder Slope: Back">16</param>
+      <param name="torso_full_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Torso: Full Back Length">16.875</param>
+      <param name="waist_arc_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist Arc Front">13.75</param>
+      <param name="across_chest" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Across Chest">14.375</param>
+      <param name="torso_center_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Torso: Center Front Length">14</param>
+      <param name="across_shoulder_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Across Shoulder Front">15.375</param>
+    </page>
+<page name="extra" _gui-text="Upper Torso3">
+      <param name="torso_center_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Torso: Center Back Length">16.25</param>
+      <param name="across_shoulder_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Across Shoulder Back">16</param>
+      <param name="bust_arc" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Bust Arc">19.75</param>
+      <param name="neck_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Neck Base Back">5.75</param>
+    </page>
+
+  </param>
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Sewing Patterns"/>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command reldir="extensions" interpreter="python">bodice_children.py</command>
+  </script>
+
+</inkscape-extension>

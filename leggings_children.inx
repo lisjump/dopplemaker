@@ -1,0 +1,71 @@
+
+<inkscape-extension>
+
+  <_name>Children - Leggings</_name>
+  <id>sewingpatterns.leggings_children.llueninghoener</id>
+
+  <dependency type="executable" location="extensions">leggings_children.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">sewing_patterns.py</dependency>
+  <param name="extra" type="notebook">
+    <page name="extra" _gui-text="Options">
+      <param name="m_unit" type="optiongroup" _gui-text="Select measurement: ">
+            <option value="Inches">Inches</option>
+            <option value="Centimeters">Centimeters</option>
+      </param>
+      <param name="size" type="optiongroup" _gui-text="Select Size: ">
+            <option type="string" value="custom">Custom</option>
+            <option type="string" value="3-uni">3-uni</option>
+            <option type="string" value="4-uni">4-uni</option>
+            <option type="string" value="5-uni">5-uni</option>
+            <option type="string" value="6-uni">6-uni</option>
+            <option type="string" value="7-girls">7-girls</option>
+            <option type="string" value="8-girls">8-girls</option>
+            <option type="string" value="10-girls">10-girls</option>
+            <option type="string" value="12-girls">12-girls</option>
+      </param>
+    </page>
+    <page name="extra" _gui-text="Legs">
+      <param name="calf" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Calf Girth">9.875</param>
+      <param name="thigh" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Upper Thigh Girth">13.75</param>
+      <param name="waist_knee" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Knee">16</param>
+      <param name="waist_ankle" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Ankle">23.75</param>
+      <param name="knee" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Bent Knee Girth">10.375</param>
+      <param name="ankle" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Ankle Girth">7.25</param>
+    </page>
+    <page name="extra" _gui-text="Lower Torso">
+      <param name="waist_waistband_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Waistband: Back">2.875</param>
+      <param name="waist_crotch_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Crotch Length: Back">10.5</param>
+      <param name="waist_waistband_side" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Waistband: Side">2.875</param>
+      <param name="waist_hip_side" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Hip: Side">5.75</param>
+      <param name="hip_arc_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Hip Arc Back">12.5</param>
+      <param name="waist_hip_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Hip: Front">5.75</param>
+    </page>
+<page name="extra" _gui-text="Lower Torso2">
+      <param name="waist_hip_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Hip: Back">5.75</param>
+      <param name="hip_arc_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Hip Arc Front">13.25</param>
+      <param name="crotch_depth" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Crotch Depth">7</param>
+      <param name="waist_waistband_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist to Waistband: Front">2.875</param>
+      <param name="waist_crotch_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Crotch Length:  Front">10</param>
+    </page>
+    <page name="extra" _gui-text="Upper Torso">
+      <param name="waistband_arc_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waistband Arc Front">12.875</param>
+      <param name="waist_arc_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist Arc Back">11.25</param>
+      <param name="waistband_arc_back" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waistband Arc Back">11.5</param>
+      <param name="waist_arc_front" type="float" precision="3"  min="1.0" max="1000.0" gui-text="Waist Arc Front">12.5</param>
+    </page>
+
+  </param>
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Sewing Patterns"/>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command reldir="extensions" interpreter="python">leggings_children.py</command>
+  </script>
+
+</inkscape-extension>
