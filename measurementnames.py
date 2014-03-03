@@ -3,7 +3,8 @@ from xmlparser import *
 
 fo = open('measurementnames.txt', 'w+')
 
-measurementsraw = open('women_measurements.xml', 'r')
+# measurementsraw = open('women_measurements.xml', 'r')
+measurementsraw = open('children_measurements.xml', 'r')
 measurements = xml2obj(measurementsraw)
 measurementsraw.close()
 

@@ -59,7 +59,7 @@ class LeggingsChildren(inkex.Effect):
     	
     	global IN, CM, MEASUREMENT_CONVERSION, m_size, DEBUG
     	
-        DEBUG = True
+        DEBUG = False
         
         INCH_to_PX=90.0 #inkscape uses 90 pixels per 1 inch
         CM_to_INCH=1/2.54
@@ -131,64 +131,63 @@ class LeggingsChildren(inkex.Effect):
 
         # Leggings
         Leggings(leggings, m)
+        leggings.movePointToXY(Point('', leggings.pts['D1'].x, leggings.pts['B1'].y), 1*IN, 1*IN)
         leggings.drawSeam()
         resizeDoc(doc, 1*IN, leggings)  
 
 def Leggings(l, m):
 	# Leggings Front
 	# pattern points
-	A = l.pointXY('A', 0, 0)
-	B = l.point('B', downPoint(A, m['waist_waistband_side']))
-	C = l.point('C', downPoint(A, m['waist_hip_side']))
-	D = l.point('D', downPoint(A, m['crotch_depth']))
-	E = l.point('E', downPoint(A, m['waist_knee']))
-	F = l.point('F', downPoint(A, m['waist_ankle']))
+	a = l.pointXY('A', 0, 0)
+	b = l.point('B', downPoint(a, m['waist_waistband_side']))
+	c = l.point('C', downPoint(a, m['waist_hip_side']))
+	d = l.point('D', downPoint(a, m['crotch_depth']))
+	e = l.point('E', downPoint(a, m['waist_knee']))
+	f = l.point('F', downPoint(a, m['waist_ankle']))
+	g = l.point('G', downPoint(d, distance(d, e)/4))
 	
-	C1 = l.point('C1', leftPoint(C, m['hip_arc_back']/2))
-	C2 = l.point('C2', rightPoint(C, m['hip_arc_front']/2))
+	c1 = l.point('C1', leftPoint(c, m['hip_arc_back']/2))
+	c2 = l.point('C2', rightPoint(c, m['hip_arc_front']/2))
 	
-	E1 = l.point('E1', leftPoint(E, m['knee']/2))
-	E2 = l.point('E2', rightPoint(E, m['knee']/2))
+	e1 = l.point('E1', leftPoint(e, m['knee']/2))
+	e2 = l.point('E2', rightPoint(e, m['knee']/2))
 
-	F1 = l.point('F1', leftPoint(F, m['ankle']/2))
-	F2 = l.point('F2', rightPoint(F, m['ankle']/2))
+	f1 = l.point('F1', leftPoint(f, m['ankle']/2))
+	f2 = l.point('F2', rightPoint(f, m['ankle']/2))
 	
-	B1 = l.point('B1', highest(intersectCircles(B, m['waistband_arc_back']/2, C1, m['waist_hip_back'] - m['waist_waistband_back'])))
-	B2 = l.point('B2', highest(intersectCircles(B, m['waistband_arc_front']/2, C2, m['waist_hip_front'] - m['waist_waistband_front'])))
+	b1 = l.point('B1', highest(intersectCircles(b, m['waistband_arc_back']/2, c1, m['waist_hip_back'] - m['waist_waistband_back'])))
+	b2 = l.point('B2', highest(intersectCircles(b, m['waistband_arc_front']/2, c2, m['waist_hip_front'] - m['waist_waistband_front'])))
 
-	A1 = l.point('A1', highest(intersectCircles(A, m['waist_arc_back']/2, B1, m['waist_waistband_back'])))
-	A2 = l.point('A2', highest(intersectCircles(A, m['waist_arc_front']/2, B2, m['waist_waistband_front'])))
+	a1 = l.point('A1', highest(intersectCircles(a, m['waist_arc_back']/2, b1, m['waist_waistband_back'])))
+	a2 = l.point('A2', highest(intersectCircles(a, m['waist_arc_front']/2, b2, m['waist_waistband_front'])))
 	
-	D1 = l.point('D1', leftmost(intersectCircleAtY(C1, m['waist_crotch_back'] - m['waist_hip_back'], D.y)))
-	D2 = l.point('D2', rightmost(intersectCircleAtY(C2, m['waist_crotch_front'] - m['waist_hip_front'], D.y)))
-	D3 = l.point('D3', leftPoint(D, m['thigh']/2))
-	D4 = l.point('D4', rightPoint(D, m['thigh']/2))
+	d1 = l.point('D1', leftPoint(d, m['hip_arc_back']*2/3))
+	d2 = l.point('D2', rightPoint(d, m['hip_arc_front']*2/3))
+	
+	g1 = l.point('G1', leftPoint(g, m['thigh']/2 + (m['hip_arc_back']/2 - m['hip_arc_front']/2)/2))
+	g2 = l.point('G2', rightPoint(g, m['thigh'] - distance(g, g1)))
 
-# 	a2 = bf.point('2', upPoint(aA, m['torso_center_front']))
-# 	a3 = bf.point('3', leftPoint(a1, m['across_shoulder_front']/2))
-# 	a4 = bf.point('4', leftPoint(a1, m['across_chest']/2))
-# 	aB = bf.point('B', highest(intersectCircleAtX(aA, m['shoulder_slope_front'], a3.x)))
-# 	aC = bf.point('C', highest(intersectCircleAtY(aB, m['shoulder_length'], a3.y)))
-# 	a6 = bf.point('6', leftPoint(aA, m['bust_arc']/2))
-# 	aE = bf.point('E', upPoint(a6, m['side_length']))
-# 	aF = bf.point('F', downPoint(a2, distance(a1, a2)/2))
-# 	aG = bf.point('G', leftPoint(aF, m['across_chest']/2))
+	# Crotch Curve
+ 	d1.c2 = l.cpoint(d1, 2, intersectLineAtLength(d1, g1, (c1.x - d1.x)/3, -75))
+ 	c1.c2 = l.cpoint(c1, 2, intersectLineAtLength(c1, b1, distance(c1, b1)/2))
+ 	c1.c1 = l.cpoint(c1, 1, intersectLineAtLength(c1, c1.c2, -distance(c1, d1)/3))
 
-# 
-# 	# Armhole Curve
-# 	aB.c1 = bf.cpoint(aB, 1, intersectLineAtLength(aB, aC, distance(aB, aG)/3, 90))
-# 	aG.c1 = bf.cpointXY(aG, 1, aG.x, aE.y + (aG.y-aE.y)/5)
-# 	aG.c2 = bf.cpoint(aG, 2, intersectLineAtLength(aG, aG.c1, -distance(aB, aB.c1)))
-# 	aE.c2 = bf.cpoint(aE, 2, intersectLineAtLength(aE, aD, (aG.c1.x-aE.x)*4.0/8, -90))
+ 	d2.c1 = l.cpoint(d2, 1, intersectLineAtLength(d2, g2, (d2.x - c2.x)/3, 75))
+ 	c2.c1 = l.cpoint(c2, 1, intersectLineAtLength(c2, b2, distance(c2, b2)/2))
+ 	c2.c2 = l.cpoint(c2, 2, intersectLineAtLength(c2, c2.c1, -distance(c2, d2)/3))
 
 	# grainline, darts, and seams
-	aG1 = downPoint(leftPoint(B, 2*IN), (m['waist_ankle'] - m['waist_waistband_side'])*1/3)
+	aG1 = downPoint(leftPoint(c, 2*IN), (m['waist_ankle'] - m['waist_waistband_side'])*1/3)
 	aG2 = downPoint(aG1, (m['waist_ankle'] - m['waist_waistband_side'])/3)
 	l.declareGrainline(aG1, aG2)
-	l.declareSeam(A, B)
-# 	bf.addDart(aF, aE, aI, aJ)
-# 	if DEBUG:
-# 	  writeSomething(bf.layer, "bf: " + str(bf.lengthOfCurve([aH, a13, aD, a9])/90), 0, -2*IN)
+	l.declareSeam(b2, c2, d2, g2, e2, f2, f1, e1, g1, d1, c1, b1, b, b2)
+	l.addGuide(b, f)
+	l.addGuide(e1, e2)
+	l.addGuide(g1, g2)
+	l.smoothPoint(g1, .33)
+	l.smoothPoint(e1, .33)
+	l.smoothPoint(g2, .33)
+	l.smoothPoint(e2, .33)
 
 
 effect=LeggingsChildren()

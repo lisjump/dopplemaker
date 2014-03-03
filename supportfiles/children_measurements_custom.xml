@@ -46,7 +46,7 @@
     <gui_text>Torso: Center Front Length</gui_text>
     <description>Taken from the center of the neckline straight down to the waistline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.75</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -56,7 +56,7 @@
     <gui_text>Torso: Center Back Length</gui_text>
     <description>Taken from the center of the neckline straight down to the waistline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -66,7 +66,7 @@
     <gui_text>Torso: Full Front Length</gui_text>
     <description>Taken from the joining of the neck and shoulder seams straight down to the waistline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.75</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -76,7 +76,7 @@
     <gui_text>Torso: Full Back Length</gui_text>
     <description>Taken from the joining of the neck and shoulder seams straight down to the waistline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>10.75</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -86,7 +86,7 @@
     <gui_text>Shoulder Slope: Front</gui_text>
     <description>Taken from the joining of the shoulder seam and armscye to the center waistline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -96,7 +96,7 @@
     <gui_text>Shoulder Slope: Back</gui_text>
     <description>Taken from the joining of the shoulder seam and armscye to the center waistline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>10.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -106,7 +106,7 @@
     <gui_text>Side Length</gui_text>
     <description>Taken along the side seam from the base of the armscye to the waist.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>5.75</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -116,7 +116,7 @@
     <gui_text>Neck Base Front</gui_text>
     <description>Taken from the joining of the neck and shoulder seams around the base of the neck, through the center front.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>7.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -126,7 +126,7 @@
     <gui_text>Neck Base Back</gui_text>
     <description>Taken from the joining of the neck and shoulder seams around the base of the neck, through the center back.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -136,7 +136,7 @@
     <gui_text>Shoulder Length</gui_text>
     <description>Taken along the shoulder seam from the base of the neck to the armscye.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>3</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -146,7 +146,7 @@
     <gui_text>Across Shoulder Front</gui_text>
     <description>Taken from the joining of the armscye and shoulder seams across the base of the neck.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.75</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -156,7 +156,7 @@
     <gui_text>Across Shoulder Back</gui_text>
     <description>Taken from the joining of the armscye and shoulder seams across the base of the neck.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.25</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -166,7 +166,7 @@
     <gui_text>Across Chest</gui_text>
     <description>Taken from center height of armscye to center height of armscye</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -176,7 +176,7 @@
     <gui_text>Across Back</gui_text>
     <description>Taken from center height of armscye to center height of armscye</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.25</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -186,7 +186,7 @@
     <gui_text>Bust/Chest Arc</gui_text>
     <description>Taken across the back from side seam to side seam at the base of the armscye.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.25</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -196,7 +196,7 @@
     <gui_text>Back Arc</gui_text>
     <description>Taken across the back from side seam to side seam at the base of the armscye.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>12</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -206,8 +206,8 @@
     <gui_text>Waist Arc Front</gui_text>
     <description>Taken from side seam to side seam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>12.5</value></size>
+      <size><name>emily-2.5</name><value>11.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -216,8 +216,8 @@
     <gui_text>Waist Arc Back</gui_text>
     <description>Taken from side seam to side seam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.75</value></size>
+      <size><name>emily-2.5</name><value>8.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -226,8 +226,8 @@
     <gui_text>Waistband Arc Front</gui_text>
     <description>Taken from side seam to side seam where the waistband will lay.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.5</value></size>
+      <size><name>emily-2.5</name><value>10.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -236,8 +236,8 @@
     <gui_text>Waistband Arc Back</gui_text>
     <description>Taken from side seam to side seam where the waistband will lay.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.25</value></size>
+      <size><name>emily-2.5</name><value>7.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -246,7 +246,7 @@
     <gui_text>Abdomen Front</gui_text>
     <description>Taken whereever the abdomen protrudes most, from side seam to side seam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>12.75</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -256,7 +256,7 @@
     <gui_text>Abdomen Back</gui_text>
     <description>Taken whereever the abdomen protrudes most, from side seam to side seam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>10.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -266,8 +266,8 @@
     <gui_text>Hip Arc Front</gui_text>
     <description>Taken where the hip measurement is largest, from side seam to side seam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.5</value></size>
+      <size><name>emily-2.5</name><value>9.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -276,8 +276,8 @@
     <gui_text>Hip Arc Back</gui_text>
     <description>Taken where the hip measurement is largest, from side seam to side seam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>13</value></size>
+      <size><name>emily-2.5</name><value>9.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -286,7 +286,7 @@
     <gui_text>Trunk Length</gui_text>
     <description></description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>40</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -296,8 +296,8 @@
     <gui_text>Crotch Length</gui_text>
     <description>Taken from center waist front to center waist back.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>21</value></size>
+      <size><name>emily-2.5</name><value>17.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -306,8 +306,8 @@
     <gui_text>Crotch Length:  Front</gui_text>
     <description>Taken from center waist front to inseam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.5</value></size>
+      <size><name>emily-2.5</name><value>8.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -316,8 +316,8 @@
     <gui_text>Crotch Length: Back</gui_text>
     <description>Taken from center waist back to inseam.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11.5</value></size>
+      <size><name>emily-2.5</name><value>9</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -326,8 +326,8 @@
     <gui_text>Crotch Depth</gui_text>
     <description></description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>8</value></size>
+      <size><name>emily-2.5</name><value>7</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -336,8 +336,8 @@
     <gui_text>Waist to Hip: Front</gui_text>
     <description>Taken from the waistline down to the hipline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>6.5</value></size>
+      <size><name>emily-2.5</name><value>4.75</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -346,8 +346,8 @@
     <gui_text>Waist to Hip: Back</gui_text>
     <description>Taken from the waistline down to the hipline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>6.5</value></size>
+      <size><name>emily-2.5</name><value>4</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -356,8 +356,8 @@
     <gui_text>Waist to Hip: Side</gui_text>
     <description>Taken from the waistline down to the hipline.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>6</value></size>
+      <size><name>emily-2.5</name><value>4</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -366,8 +366,8 @@
     <gui_text>Waist to Waistband: Front</gui_text>
     <description>Taken from the waistline down to the desired waistband.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>4.5</value></size>
+      <size><name>emily-2.5</name><value>4</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -376,8 +376,8 @@
     <gui_text>Waist to Waistband: Back</gui_text>
     <description>Taken from the waistline down to the desired waistband.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>3</value></size>
+      <size><name>emily-2.5</name><value>1</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -386,8 +386,8 @@
     <gui_text>Waist to Waistband: Side</gui_text>
     <description>Taken from the waistline down to the desired waistband.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>3.25</value></size>
+      <size><name>emily-2.5</name><value>1.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -396,8 +396,8 @@
     <gui_text>Waist to Knee</gui_text>
     <description>This is a vertical measurement, from the center front waistline to knee level.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>14.5</value></size>
+      <size><name>emily-2.5</name><value>11.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -406,8 +406,8 @@
     <gui_text>Waist to Ankle</gui_text>
     <description>This is a vertical measurement, from the center front waistline to ankle level.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>24.5</value></size>
+      <size><name>emily-2.5</name><value>18.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -416,8 +416,8 @@
     <gui_text>Waist to Floor</gui_text>
     <description>This is a vertical measurement, from the center front waistline to the floor.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>26</value></size>
+      <size><name>emily-2.5</name><value>20</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -426,7 +426,7 @@
     <gui_text>Shoulder to Wrist</gui_text>
     <description>Taken from the joining of the shoulder seam to the armscye to the wrist over a bent elbow.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>15.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -436,7 +436,7 @@
     <gui_text>Shoulder to Elbow</gui_text>
     <description>Taken from the joining of the shoulder seam to the armscye to the tip of the bent elbow.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>8.5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -446,7 +446,7 @@
     <gui_text>Underarm Length</gui_text>
     <description>Taken from the base of the armscye to the wrist with a straight arm.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>11</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -456,7 +456,7 @@
     <gui_text>Upperarm Width</gui_text>
     <description>Taken around the entire arm at armpit level.  No ease.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>7</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -466,7 +466,7 @@
     <gui_text>Elbow Circumference</gui_text>
     <description>Taken around the entire elbow with the arm bent.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>7.25</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -476,7 +476,7 @@
     <gui_text>Wrist Circumference</gui_text>
     <description>Taken around the entire wrist.</description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>5</value></size>
       <size><name>emily-2.5</name><value></value></size>
     </sizes>
   </measurement>
@@ -508,8 +508,8 @@
     <gui_text>Upper Thigh Girth</gui_text>
     <description></description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>14</value></size>
+      <size><name>emily-2.5</name><value>11</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -518,8 +518,8 @@
     <gui_text>Bent Knee Girth</gui_text>
     <description></description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>10</value></size>
+      <size><name>emily-2.5</name><value>8</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -528,8 +528,8 @@
     <gui_text>Calf Girth</gui_text>
     <description></description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9.5</value></size>
+      <size><name>emily-2.5</name><value>8</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -538,8 +538,8 @@
     <gui_text>Ankle Girth</gui_text>
     <description></description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>7.75</value></size>
+      <size><name>emily-2.5</name><value>6</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -548,8 +548,8 @@
     <gui_text>Foot Entry</gui_text>
     <description></description>
     <sizes>
-      <size><name>maddy-4.5</name><value></value></size>
-      <size><name>emily-2.5</name><value></value></size>
+      <size><name>maddy-4.5</name><value>9</value></size>
+      <size><name>emily-2.5</name><value>7</value></size>
     </sizes>
   </measurement>
 </measurements>

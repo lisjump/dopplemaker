@@ -4,8 +4,6 @@ waistband_arc_front
 waistband_arc_back
 hip_arc_front
 hip_arc_back
-waist_crotch_front
-waist_crotch_back
 crotch_depth
 waist_waistband_front
 waist_waistband_back
@@ -17,5 +15,4 @@ waist_knee
 waist_ankle
 thigh
 knee
-calf
 ankle
