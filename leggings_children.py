@@ -131,7 +131,8 @@ class LeggingsChildren(inkex.Effect):
 
         # Leggings
         Leggings(leggings, m)
-        leggings.movePointToXY(Point('', leggings.pts['D1'].x, leggings.pts['B1'].y), 1*IN, 1*IN)
+        if not DEBUG:
+          leggings.movePointToXY(Point('', leggings.pts['D1'].x, leggings.pts['B1'].y), 1*IN, 1*IN)
         leggings.drawSeam()
         resizeDoc(doc, 1*IN, leggings)  
 
@@ -140,7 +141,13 @@ def Leggings(l, m):
 	# pattern points
 	a = l.pointXY('A', 0, 0)
 	b = l.point('B', downPoint(a, m['waist_waistband_side']))
-	c = l.point('C', downPoint(a, m['waist_hip_side']))
+	hipcrotchratio = 0.8
+	if (m['waist_hip_side']/m['crotch_depth']) > hipcrotchratio:
+	  c = l.point('C', downPoint(a, m['crotch_depth'] * hipcrotchratio))
+	  m['waist_hip_front'] = m['waist_hip_front'] - (m['waist_hip_side'] - m['crotch_depth'] * hipcrotchratio)
+	  m['waist_hip_back'] = m['waist_hip_back'] - (m['waist_hip_side'] - m['crotch_depth'] * hipcrotchratio)
+	else:
+	  c = l.point('C', downPoint(a, m['waist_hip_side']))
 	d = l.point('D', downPoint(a, m['crotch_depth']))
 	e = l.point('E', downPoint(a, m['waist_knee']))
 	f = l.point('F', downPoint(a, m['waist_ankle']))
@@ -170,11 +177,11 @@ def Leggings(l, m):
 	# Crotch Curve
  	d1.c2 = l.cpoint(d1, 2, intersectLineAtLength(d1, g1, (c1.x - d1.x)/3, -75))
  	c1.c2 = l.cpoint(c1, 2, intersectLineAtLength(c1, b1, distance(c1, b1)/2))
- 	c1.c1 = l.cpoint(c1, 1, intersectLineAtLength(c1, c1.c2, -distance(c1, d1)/3))
+ 	c1.c1 = l.cpoint(c1, 1, intersectLineAtLength(c1, c1.c2, (c1.y - d1.y)/2))
 
  	d2.c1 = l.cpoint(d2, 1, intersectLineAtLength(d2, g2, (d2.x - c2.x)/3, 75))
  	c2.c1 = l.cpoint(c2, 1, intersectLineAtLength(c2, b2, distance(c2, b2)/2))
- 	c2.c2 = l.cpoint(c2, 2, intersectLineAtLength(c2, c2.c1, -distance(c2, d2)/3))
+ 	c2.c2 = l.cpoint(c2, 2, intersectLineAtLength(c2, c2.c1, (c2.y - d2.y)/2))
 
 	# grainline, darts, and seams
 	aG1 = downPoint(leftPoint(c, 2*IN), (m['waist_ankle'] - m['waist_waistband_side'])*1/3)
