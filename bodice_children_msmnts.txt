@@ -1,16 +1,19 @@
-#!/usr/bin/python
-from xmlparser import *
-
-fo = open('measurementnames.txt', 'w+')
-
-# measurementsraw = open('women_measurements.xml', 'r')
-measurementsraw = open('children_measurements.xml', 'r')
-measurements = xml2obj(measurementsraw)
-measurementsraw.close()
-
-
-for measurement in measurements.measurement:
-  fo.write(measurement.name)
-  fo.write("\n")
-  
-fo.close()
+torso_center_front
+torso_center_back
+torso_full_front
+torso_full_back
+shoulder_slope_front
+shoulder_slope_back
+side_length
+shoulder_length
+across_shoulder_front
+across_shoulder_back
+across_chest
+across_back
+bust_arc
+back_arc
+waist_arc_front
+waist_arc_back
+shoulder_wrist
+underarm
+upperarm_width

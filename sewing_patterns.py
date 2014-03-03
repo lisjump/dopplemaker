@@ -49,6 +49,7 @@ class PatternPiece():
       self.cpts = {}       # pt: {1:cpt, 2:cpt}
       self.seam = []       # an array of points
       self.darts = {}      # 'id': (leg1, leg2, top, center) all are points
+      self.guides = {}     # 'id': (pt1, pt2) are all points
       self.grainline = []  # an array with two points
       self.layerVisible(True, False)
     
@@ -89,7 +90,7 @@ class PatternPiece():
         
     # Declaring and Changing Pattern Objects
     def declareGrainline(self, pt1, pt2):
-      self.grainline = [self.point('G1', pt1), self.point('G2', pt2)]
+      self.grainline = [self.point('Grain1', pt1), self.point('Grain2', pt2)]
       
     def declareSeam(self, *pts):
       self.seam = [pt for pt in pts]
@@ -127,12 +128,71 @@ class PatternPiece():
       self.darts[id] = ([leg1, leg2, top, mid])
       return self.darts[id]
     
+    def addGuide(self, pt1, pt2):
+      id = pt1.id + pt2.id
+      backwardsid = pt2.id + pt1.id
+      if backwardsid in self.guides:
+        id = backwardsid
+      self.guides[id] = ([pt1, pt2])
+      return self.guides[id]
+    
+    def smoothPoint(self, pt, percent1, percent2 = None):
+    #picks control points for a point to smooth out the seam
+    #percent1 is the decimal percentage from the point to the point prior on the seam
+    #percent2 is the decimal percentage from the point to the point following on the seam
+    
+      if percent2 == None:
+        percent2 = percent1
+      
+      if pt not in self.seam:
+        return False
+        
+      index = self.seam.index(pt)
+      if index == 0:
+        pt1 = self.seam[len(self.seam)-2]
+      else:
+        pt1 = self.seam[index - 1]
+      
+      pt2 = self.seam[index + 1]
+      
+      pt3 = intersectLines(pt1, pt2, pt, leftPoint(pt, 2))
+      
+      changex = pt3.x - pt.x
+      
+      new1 = leftPoint(pt1, changex)
+      new2 = leftPoint(pt2, changex)
+      
+      if highest([new1, new2, pt]) == pt:
+        if  highest([new1, new2]) == new1:
+          cp1 = intersectLineAtLength(pt, new2, -distance(pt, pt1)*percent1)
+          cp2 = intersectLineAtLength(pt, new2, distance(pt, pt2)*percent2)
+        else:
+          cp1 = intersectLineAtLength(pt, new1, distance(pt, pt1)*percent1)
+          cp2 = intersectLineAtLength(pt, new1, -distance(pt, pt2)*percent2)
+      elif lowest([new1, new2, pt]) == pt:
+        if  lowest([new1, new2]) == new1:
+          cp1 = intersectLineAtLength(pt, new2, -distance(pt, pt1)*percent1)
+          cp2 = intersectLineAtLength(pt, new2, distance(pt, pt2)*percent2)
+        else:
+          cp1 = intersectLineAtLength(pt, new1, distance(pt, pt1)*percent1)
+          cp2 = intersectLineAtLength(pt, new1, -distance(pt, pt2)*percent2)
+      else:
+        cp1 = intersectLineAtLength(pt, new1, distance(pt, pt1)*percent1)
+        cp2 = intersectLineAtLength(pt, new2, distance(pt, pt2)*percent2)
+        
+      self.cpoint(pt, 1, cp1)
+      self.cpoint(pt, 2, cp2)
+    
     # Drawing Pattern Objects
     def drawDart(self, dart):
       path_str=formatPath('M', dart[0], 'L', dart[2], 'L', dart[1])
       addPath(self.layer, self.id + 'dart', path_str, 'dartline')
       path_str=formatPath('M', dart[2], 'L', dart[3])
       addPath(self.layer, self.id + 'dartcenter', path_str, 'seamline')
+      
+    def drawGuide(self, guide):
+      path_str=formatPath('M', guide[0], 'L', guide[1])
+      addPath(self.layer, self.id + 'guide', path_str, 'dartline')
       
     def drawSeam(self):
       #accepts a list of points in clockwise order
@@ -156,13 +216,19 @@ class PatternPiece():
       for dart in self.darts.keys():
         self.drawDart(self.darts[dart])
       
+      # draw guides
+      for guide in self.guides.keys():
+        self.drawGuide(self.guides[guide])
+      
       # draw grainline
       path_str = formatPath('M', self.grainline[0], 'L', self.grainline[1])
       addPath(self.layer, self.id + 'grainline', path_str, 'grainline')
 
     def drawPoints(self, pointArray = False):
       if not pointArray:
-        pointArray = self.pts
+        pointArray = []
+        for id in self.pts:
+          pointArray.append(self.pts[id])
       
       for pt in pointArray:
         drawPoint(self.draft, pt.id, pt.x, pt.y)
@@ -443,34 +509,34 @@ def isBelow(pnt1, pnt2):
 
 def lowest(pnts):
     """Accepts array pnts[]. Returns lowest point in array."""
-    low=Point('',pnts[0].x,pnts[0].y)
+    low = pnts[0]
     for item in pnts:
         if isBelow(low,item): #if item is below current low
-            updatePoint(low,item)
+            low = item
     return low
 
 def highest(pnts):
     """Accepts array pnts[]. Returns highest point in array."""
-    high=Point('',pnts[0].x,pnts[0].y)
+    high = pnts[0]
     for item in pnts:
         if isAbove(high,item): #if item is above current high
-            updatePoint(high,item)
+            high = item
     return high
 
 def leftmost(pnts):
     """Accepts array pnts[]. Returns leftmost point in array."""
-    left=Point('',pnts[0].x,pnts[0].y)
+    left = pnts[0]
     for item in pnts:
         if isLeft(left,item):
-            updatePoint(left,item)
+            left = item
     return left
 
 def rightmost(pnts):
     """Accepts array pnts[]. Returns rightmost point in array."""
-    right=Point('',pnts[0].x,pnts[0].y)
+    right = pnts[0]
     for item in pnts:
         if isRight(right,item):
-            updatePoint(right,item)
+            right = item
     return right
 
 def sameSideOfLine(p1, p2, l1, l2):
@@ -654,28 +720,28 @@ def intersectCircles(C1,r1,C2,r2):
         #intersections=0
         #TODO: better error handling here
         debug('center of both circles are the same in intersectCircles()')
-        debug('C1 =', C1.x, C1.y, 'radius1 =', r1)
-        debug('C2 =', C2.x, C2.y, 'radius1 =',r2)
+#         debug('C1 = (' + str(C1.x) + ', ' +  str(C1.y) '), radius1 = ' + str(r1))
+#         debug('C2 = (' + C2.x + ', ' +  C2.y '), radius2 = ' + r2)
         return
     elif (d<abs(r1-r2)):
         #intersections=0
         #TODO: better error handling here
         debug('one circle is within the other in intersectCircles()')
-        debug('d =', d)
-        debug('r1 - r2 =',(r1-r2))
-        debug('d< abs(r1 - r2) ?', (d<abs(r1-r2)))
-        debug('C1 =', C1.x, C1.y, 'radius1 =', r1)
-        debug('C2 =', C2.x, C2.y, 'radius1 =',r2)
+#         debug('d = ' + d)
+#         debug('r1 - r2 = ' + str(r1-r2))
+#         debug('d< abs(r1 - r2) ?', (d<abs(r1-r2)))
+#         debug('C1 =', C1.x, C1.y, 'radius1 =', r1)
+#         debug('C2 =', C2.x, C2.y, 'radius1 =',r2)
         return
     elif (d>(r1+r2)):
         #intersections=0
         #TODO: better error handling here
         debug('circles do not intersect in intersectCircles()')
-        debug('d =', d)
-        debug('r1 + r2 =',(r1+r2))
-        debug('d > abs(r1 + r2) ?', (d>abs(r1+r2)))
-        debug('C1 =', C1.x, C1.y, 'radius1 =', r1)
-        debug('C2 =', C2.x, C2.y, 'radius1 =',r2)
+#         debug('d =', d)
+#         debug('r1 + r2 =',(r1+r2))
+#         debug('d > abs(r1 + r2) ?', (d>abs(r1+r2)))
+#         debug('C1 =', C1.x, C1.y, 'radius1 =', r1)
+#         debug('C2 =', C2.x, C2.y, 'radius1 =',r2)
         # TODO:possible kluge -check if this is acceptable using a small margin of error between r1 & r2 (0.5*CM)?:
         #r2=d-r1
         return

@@ -353,6 +353,38 @@
     </sizes>
   </measurement>
   <measurement>
+    <name>waistband_arc_front</name>
+    <category>Upper Torso</category>
+    <gui_text>Waistband Arc Front</gui_text>
+    <description>Taken from side seam to side seam where the waistband will lay.</description>
+    <sizes>
+      <size><name>3-uni</name><value>11.125</value></size>
+      <size><name>4-uni</name><value>11.875</value></size>
+      <size><name>5-uni</name><value>12.375</value></size>
+      <size><name>6-uni</name><value>12.875</value></size>
+      <size><name>7-girls</name><value>13.75</value></size>
+      <size><name>8-girls</name><value>14.25</value></size>
+      <size><name>10-girls</name><value>14.75</value></size>
+      <size><name>12-girls</name><value>15.25</value></size>
+    </sizes>
+  </measurement>
+  <measurement>
+    <name>waistband_arc_back</name>
+    <category>Upper Torso</category>
+    <gui_text>Waistband Arc Back</gui_text>
+    <description>Taken from side seam to side seam where the waistband will lay.</description>
+    <sizes>
+      <size><name>3-uni</name><value>10</value></size>
+      <size><name>4-uni</name><value>10.5</value></size>
+      <size><name>5-uni</name><value>11</value></size>
+      <size><name>6-uni</name><value>11.5</value></size>
+      <size><name>7-girls</name><value>13</value></size>
+      <size><name>8-girls</name><value>13.5</value></size>
+      <size><name>10-girls</name><value>14</value></size>
+      <size><name>12-girls</name><value>14.5</value></size>
+    </sizes>
+  </measurement>
+  <measurement>
     <name>abdomen_front</name>
     <category>Lower Torso</category>
     <gui_text>Abdomen Front</gui_text>
@@ -449,19 +481,51 @@
     </sizes>
   </measurement>
   <measurement>
+    <name>waist_crotch_front</name>
+    <category>Lower Torso</category>
+    <gui_text>Crotch Length:  Front</gui_text>
+    <description>Taken from center waist front to inseam.</description>
+    <sizes>
+      <size><name>3-uni</name><value>8.3125</value></size>
+      <size><name>4-uni</name><value>8.875</value></size>
+      <size><name>5-uni</name><value>9.4375</value></size>
+      <size><name>6-uni</name><value>10</value></size>
+      <size><name>7-girls</name><value>10.625</value></size>
+      <size><name>8-girls</name><value>11.1875</value></size>
+      <size><name>10-girls</name><value>11.75</value></size>
+      <size><name>12-girls</name><value>12.3125</value></size>
+    </sizes>
+  </measurement>
+  <measurement>
+    <name>waist_crotch_back</name>
+    <category>Lower Torso</category>
+    <gui_text>Crotch Length: Back</gui_text>
+    <description>Taken from center waist back to inseam.</description>
+    <sizes>
+      <size><name>3-uni</name><value>8.8125</value></size>
+      <size><name>4-uni</name><value>9.375</value></size>
+      <size><name>5-uni</name><value>9.9375</value></size>
+      <size><name>6-uni</name><value>10.5</value></size>
+      <size><name>7-girls</name><value>11.125</value></size>
+      <size><name>8-girls</name><value>11.6875</value></size>
+      <size><name>10-girls</name><value>12.25</value></size>
+      <size><name>12-girls</name><value>12.8125</value></size>
+    </sizes>
+  </measurement>
+  <measurement>
     <name>crotch_depth</name>
     <category>Lower Torso</category>
     <gui_text>Crotch Depth</gui_text>
     <description></description>
     <sizes>
-      <size><name>3-uni</name><value></value></size>
-      <size><name>4-uni</name><value></value></size>
-      <size><name>5-uni</name><value></value></size>
-      <size><name>6-uni</name><value></value></size>
-      <size><name>7-girls</name><value></value></size>
-      <size><name>8-girls</name><value></value></size>
-      <size><name>10-girls</name><value></value></size>
-      <size><name>12-girls</name><value></value></size>
+      <size><name>3-uni</name><value>5.5</value></size>
+      <size><name>4-uni</name><value>6</value></size>
+      <size><name>5-uni</name><value>6.5</value></size>
+      <size><name>6-uni</name><value>7</value></size>
+      <size><name>7-girls</name><value>7</value></size>
+      <size><name>8-girls</name><value>8</value></size>
+      <size><name>10-girls</name><value>9</value></size>
+      <size><name>12-girls</name><value>10.25</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -470,14 +534,14 @@
     <gui_text>Waist to Hip: Front</gui_text>
     <description>Taken from the waistline down to the hipline.</description>
     <sizes>
-      <size><name>3-uni</name><value>4.625</value></size>
-      <size><name>4-uni</name><value>5</value></size>
-      <size><name>5-uni</name><value>5.375</value></size>
-      <size><name>6-uni</name><value>5.75</value></size>
-      <size><name>7-girls</name><value>6.5</value></size>
-      <size><name>8-girls</name><value>6.5</value></size>
-      <size><name>10-girls</name><value>7</value></size>
-      <size><name>12-girls</name><value>7</value></size>
+      <size><name>3-uni</name><value>4.5</value></size>
+      <size><name>4-uni</name><value>4.875</value></size>
+      <size><name>5-uni</name><value>5.25</value></size>
+      <size><name>6-uni</name><value>5.625</value></size>
+      <size><name>7-girls</name><value>6.375</value></size>
+      <size><name>8-girls</name><value>6.375</value></size>
+      <size><name>10-girls</name><value>6.875</value></size>
+      <size><name>12-girls</name><value>6.875</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -486,14 +550,14 @@
     <gui_text>Waist to Hip: Back</gui_text>
     <description>Taken from the waistline down to the hipline.</description>
     <sizes>
-      <size><name>3-uni</name><value>4.625</value></size>
-      <size><name>4-uni</name><value>5</value></size>
-      <size><name>5-uni</name><value>5.375</value></size>
-      <size><name>6-uni</name><value>5.75</value></size>
-      <size><name>7-girls</name><value>6.5</value></size>
-      <size><name>8-girls</name><value>6.5</value></size>
-      <size><name>10-girls</name><value>7</value></size>
-      <size><name>12-girls</name><value>7</value></size>
+      <size><name>3-uni</name><value>4.75</value></size>
+      <size><name>4-uni</name><value>5.125</value></size>
+      <size><name>5-uni</name><value>5.5</value></size>
+      <size><name>6-uni</name><value>5.875</value></size>
+      <size><name>7-girls</name><value>6.625</value></size>
+      <size><name>8-girls</name><value>6.625</value></size>
+      <size><name>10-girls</name><value>7.125</value></size>
+      <size><name>12-girls</name><value>7.125</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -510,6 +574,54 @@
       <size><name>8-girls</name><value>6.5</value></size>
       <size><name>10-girls</name><value>7</value></size>
       <size><name>12-girls</name><value>7</value></size>
+    </sizes>
+  </measurement>
+  <measurement>
+    <name>waist_waistband_front</name>
+    <category>Lower Torso</category>
+    <gui_text>Waist to Waistband: Front</gui_text>
+    <description>Taken from the waistline down to the desired waistband.</description>
+    <sizes>
+      <size><name>3-uni</name><value>2.375</value></size>
+      <size><name>4-uni</name><value>2.5</value></size>
+      <size><name>5-uni</name><value>2.625</value></size>
+      <size><name>6-uni</name><value>2.875</value></size>
+      <size><name>7-girls</name><value>3.25</value></size>
+      <size><name>8-girls</name><value>3.25</value></size>
+      <size><name>10-girls</name><value>3.5</value></size>
+      <size><name>12-girls</name><value>73.5</value></size>
+    </sizes>
+  </measurement>
+  <measurement>
+    <name>waist_waistband_back</name>
+    <category>Lower Torso</category>
+    <gui_text>Waist to Waistband: Back</gui_text>
+    <description>Taken from the waistline down to the desired waistband.</description>
+    <sizes>
+      <size><name>3-uni</name><value>2.375</value></size>
+      <size><name>4-uni</name><value>2.5</value></size>
+      <size><name>5-uni</name><value>2.625</value></size>
+      <size><name>6-uni</name><value>2.875</value></size>
+      <size><name>7-girls</name><value>3.25</value></size>
+      <size><name>8-girls</name><value>3.25</value></size>
+      <size><name>10-girls</name><value>3.5</value></size>
+      <size><name>12-girls</name><value>73.5</value></size>
+    </sizes>
+  </measurement>
+  <measurement>
+    <name>waist_waistband_side</name>
+    <category>Lower Torso</category>
+    <gui_text>Waist to Waistband: Side</gui_text>
+    <description>Taken from the waistline down to the desired waistband.</description>
+    <sizes>
+      <size><name>3-uni</name><value>2.375</value></size>
+      <size><name>4-uni</name><value>2.5</value></size>
+      <size><name>5-uni</name><value>2.625</value></size>
+      <size><name>6-uni</name><value>2.875</value></size>
+      <size><name>7-girls</name><value>3.25</value></size>
+      <size><name>8-girls</name><value>3.25</value></size>
+      <size><name>10-girls</name><value>3.5</value></size>
+      <size><name>12-girls</name><value>73.5</value></size>
     </sizes>
   </measurement>
   <measurement>
@@ -707,7 +819,7 @@
     </sizes>
   </measurement>
   <measurement>
-    <name>Knee</name>
+    <name>knee</name>
     <category>Legs</category>
     <gui_text>Bent Knee Girth</gui_text>
     <description></description>
@@ -723,7 +835,7 @@
     </sizes>
   </measurement>
   <measurement>
-    <name>Calf</name>
+    <name>calf</name>
     <category>Legs</category>
     <gui_text>Calf Girth</gui_text>
     <description></description>

@@ -9,27 +9,19 @@ def sortkey(item):
    else:
      return int(splitkeys[0][0]), splitkeys[0][1] 
 
-default_size = "8"
+default_size = "6-uni"
 
-output = open('bodice_pivnick.inx', 'w+')
+output = open('bodice_children.inx', 'w+')
 
-measurementsneededfile = open('bodice_pivnick_msmnts.txt', 'r')
+measurementsneededfile = open('bodice_children_msmnts.txt', 'r')
 measurementsneededraw = list(measurementsneededfile)
 measurementsneeded = []
 for measurement in measurementsneededraw:
   measurementsneeded.append(string.rstrip(str(measurement), '\n'))
 
-measurementsraw = open('women_measurements.xml', 'r')
+measurementsraw = open('children_measurements.xml', 'r')
 measurementsxml = xml2obj(measurementsraw)
 measurementsraw.close()
-
-try:
-  measurementscustomraw = open('women_measurements_custom.xml', 'r')
-  measurementscustomxml = xml2obj(measurementscustomraw)
-  measurementscustomraw.close()
-except (OSError, IOError):
-  measurementscustomxml = measurementsxml
-
 
 sizesavailable = []
 categories = []
@@ -51,23 +43,31 @@ for measurement in measurementsxml.measurement:
         measurements[name]['sizesavailable'].add(str(size.name))
         measurements[name]['sizes'][str(size.name)] = str(size.value)
 
-for measurement in measurementscustomxml.measurement:
-  name = str(measurement.name)
-  if name not in measurementsneeded: 
-    continue
-  if name not in measurements.keys():
-    measurements[name] = {}
-    measurements[name]['category'] = str(measurement.category)
-    measurements[name]['gui_text'] = str(measurement.gui_text)
-    measurements[name]['description'] = str(measurement.description)
-    measurements[name]['sizes'] = {}
-    measurements[name]['sizesavailable'] = set()
-    categories.append(measurements[name]['category'])
-  for size in measurement.sizes.size:
-    if size.value:
-	  sizesavailable.append(str(size.name))
-	  measurements[name]['sizesavailable'].add(str(size.name))
-	  measurements[name]['sizes'][str(size.name)] = str(size.value)
+try:
+  measurementscustomraw = open('children_measurements_custom.xml', 'r')
+  measurementscustomxml = xml2obj(measurementscustomraw)
+  measurementscustomraw.close()
+  for measurement in measurementscustomxml.measurement:
+    name = str(measurement.name)
+    if name not in measurementsneeded: 
+      continue
+    if name not in measurements.keys():
+      measurements[name] = {}
+      measurements[name]['category'] = str(measurement.category)
+      measurements[name]['gui_text'] = str(measurement.gui_text)
+      measurements[name]['description'] = str(measurement.description)
+      measurements[name]['sizes'] = {}
+      measurements[name]['sizesavailable'] = set()
+      categories.append(measurements[name]['category'])
+    for size in measurement.sizes.size:
+      if size.value:
+	    sizesavailable.append(str(size.name))
+	    measurements[name]['sizesavailable'].add(str(size.name))
+	    measurements[name]['sizes'][str(size.name)] = str(size.value)
+except (OSError, IOError):
+  measurementscustomxml = measurementsxml
+
+
 
   
 
@@ -84,10 +84,10 @@ sizesavailable.sort(key = sortkey)
 inxstart = '''
 <inkscape-extension>
 
-  <_name>Bodice-Pivnick</_name>
-  <id>sewingpatterns.bodice_pivnick.llueninghoener</id>
+  <_name>Children - Bodice</_name>
+  <id>sewingpatterns.bodice_children.llueninghoener</id>
 
-  <dependency type="executable" location="extensions">bodice_pivnick.py</dependency>
+  <dependency type="executable" location="extensions">bodice_children.py</dependency>
   <dependency type="executable" location="extensions">inkex.py</dependency>
   <dependency type="executable" location="extensions">sewing_patterns.py</dependency>
   <param name="extra" type="notebook">
@@ -142,7 +142,7 @@ inxend = '''
   </effect>
 
   <script>
-    <command reldir="extensions" interpreter="python">bodice_pivnick.py</command>
+    <command reldir="extensions" interpreter="python">bodice_children.py</command>
   </script>
 
 </inkscape-extension>
