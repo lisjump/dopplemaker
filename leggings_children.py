@@ -59,7 +59,7 @@ class LeggingsChildren(inkex.Effect):
     	
     	global IN, CM, MEASUREMENT_CONVERSION, m_size, DEBUG
     	
-        DEBUG = True
+        DEBUG = False
         
         INCH_to_PX=90.0 #inkscape uses 90 pixels per 1 inch
         CM_to_INCH=1/2.54
