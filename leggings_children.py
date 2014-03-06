@@ -59,7 +59,7 @@ class LeggingsChildren(inkex.Effect):
     	
     	global IN, CM, MEASUREMENT_CONVERSION, m_size, DEBUG
     	
-        DEBUG = False
+        DEBUG = True
         
         INCH_to_PX=90.0 #inkscape uses 90 pixels per 1 inch
         CM_to_INCH=1/2.54
@@ -175,13 +175,13 @@ def Leggings(l, m):
 	g2 = l.point('G2', rightPoint(g, m['thigh'] - distance(g, g1)))
 
 	# Crotch Curve
- 	d1.c2 = l.cpoint(d1, 2, intersectLineAtLength(d1, g1, (c1.x - d1.x)/3, -75))
+ 	d1.c2 = l.cpoint(d1, 2, intersectLineAtLength(d1, g1, (c1.x - d1.x)/3, -90))
  	c1.c2 = l.cpoint(c1, 2, intersectLineAtLength(c1, b1, distance(c1, b1)/2))
- 	c1.c1 = l.cpoint(c1, 1, intersectLineAtLength(c1, c1.c2, (c1.y - d1.y)/2))
+ 	c1.c1 = l.cpoint(c1, 1, intersectLineAtLength(c1, c1.c2, (c1.y - d1.c2.y)*2/3))
 
- 	d2.c1 = l.cpoint(d2, 1, intersectLineAtLength(d2, g2, (d2.x - c2.x)/3, 75))
+ 	d2.c1 = l.cpoint(d2, 1, intersectLineAtLength(d2, g2, (d2.x - c2.x)/2, 90))
  	c2.c1 = l.cpoint(c2, 1, intersectLineAtLength(c2, b2, distance(c2, b2)/2))
- 	c2.c2 = l.cpoint(c2, 2, intersectLineAtLength(c2, c2.c1, (c2.y - d2.y)/2))
+ 	c2.c2 = l.cpoint(c2, 2, intersectLineAtLength(c2, c2.c1, (c2.y - d2.c1.y)*2/3))
 
 	# grainline, darts, and seams
 	aG1 = downPoint(leftPoint(c, 2*IN), (m['waist_ankle'] - m['waist_waistband_side'])*1/3)
@@ -195,6 +195,7 @@ def Leggings(l, m):
 	l.smoothPoint(e1, .33)
 	l.smoothPoint(g2, .33)
 	l.smoothPoint(e2, .33)
+	l.smoothPoint(b, .33)
 
 
 effect=LeggingsChildren()
