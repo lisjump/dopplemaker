@@ -115,7 +115,10 @@ class BodicePivnick(inkex.Effect):
         #convert measurements
         for key in m.keys():
           try:
-            m[key] = float(m[key]) * MEASUREMENT_CONVERSION
+            if m_size == "custom":
+              m[key] = float(m[key]) * MEASUREMENT_CONVERSION
+            else:
+              m[key] = float(m[key]) * IN
           except TypeError:
             pass
         
